@@ -40,7 +40,7 @@ public class MascotaTest {
     }
 
     @Test
-    public void sobrePeso() {
+    public void animalGrande() {
         Mascota mascota5 = new Mascota("Lila", "cetáceo", "Ballena azul", 2.7, "Hembra", 2500.0);
     }
 
