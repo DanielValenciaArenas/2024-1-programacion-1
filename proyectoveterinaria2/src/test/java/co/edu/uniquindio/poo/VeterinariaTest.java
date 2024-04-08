@@ -40,7 +40,8 @@ public class VeterinariaTest {
         Mascota mascota = new Mascota("11113452", "Lupe", "Canino", "Chihuaha", 11, "Hembra", "Cafe", 6.7);
 
         veterinaria.registrarMascotaConIdUnico(mascota);
-
+        assertTrue(veterinaria.getMascotas().contains(mascota));
+        
         LOG.info("Finalización agregarUnaMascota");
     }
 
@@ -48,9 +49,9 @@ public class VeterinariaTest {
  @Test
     public void agregarUnaVeterinariaNula() {
         LOG.info("Inicio agregarUnaVeterinariaNula");
+        ;
+        assertThrows(Throwable.class, () -> new Veterinaria(null));
 
-        var veterinaria = new Veterinaria(null);
-        
         LOG.info("Finalización agregarUnaVeterinariaNula");
     }
 

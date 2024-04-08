@@ -1,6 +1,7 @@
 package co.edu.uniquindio.poo;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.LinkedList;
 
 public class Veterinaria {
@@ -26,6 +27,11 @@ public class Veterinaria {
             }
         }
         return mascotaInteres;
+    }
+//Metodo para obtener la colección NO modificable
+
+    public Collection<Mascota> getMascotas() {
+        return Collections.unmodifiableCollection(mascotas);
     }
 
 // Función/metodo para agregar las mascotas con IDs únicos
