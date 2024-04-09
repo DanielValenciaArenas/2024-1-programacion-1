@@ -7,7 +7,7 @@ import java.util.Comparator;
 public class Proyecto {
     private final String nombre;
     private final double costoTotal;
-    public final Collection<ParqueInfantil> parques;
+    private final Collection<ParqueInfantil> parques;
 
     public Proyecto (String nombre, double costoTotal){
         this.nombre = nombre;
@@ -46,7 +46,7 @@ public class Proyecto {
         return parquesEnMunicipio;
     }
 
-    private double calcularCostoTotalParque(ParqueInfantil parque) {
+    public double calcularCostoTotalParque(ParqueInfantil parque) {
         double costoTotalParque = 0.0;
         
         for (Zona zona : parque.getZonas()) {
