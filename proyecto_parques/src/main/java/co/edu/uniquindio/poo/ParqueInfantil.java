@@ -28,6 +28,19 @@ public class ParqueInfantil {
         return municipio;
     }
 
+    public Collection<Zona> getZonas() {
+        return zonas;
+    }
+
+    public void agregarZona(Zona zona) {
+        if (!zonas.contains(zona)) { 
+            zonas.add(zona);
+        } 
+        else {
+            System.out.println("La zona ya existe");
+        }
+    }
+
 }
     
 
