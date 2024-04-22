@@ -4,6 +4,7 @@ public class Circulo extends FiguraGeometrica {
     private final double radio;
 
     public Circulo(double radio) {
+        assert radio > 0: "El radio debe ser positivo";
         this.radio = radio;
     }
 
