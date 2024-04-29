@@ -18,7 +18,8 @@ public abstract class Producto {
         this.precio = precio;
         this.stock = stock;
         this.proveedor = proveedor;
-        this.cantidadSolicitada = 0;
+        this.cantidadSolicitada = cantidadSolicitada;
+        
     }
 
     public String getCodigoProducto() {

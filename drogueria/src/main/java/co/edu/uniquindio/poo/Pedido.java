@@ -49,7 +49,7 @@ public class Pedido {
     /*
      * Método de la prueba para obtener los productos con un stock mayor a 100.
      */
-    public Collection<Producto> productosConStockMayorA100 () {
+    public Collection<Producto> productosConStockMayorA100 (Collection<Producto> productos) {
         Collection<Producto> productosConStockMayorA100 = new LinkedList<>();
         for(Producto producto : productos) {
             if(producto.getStock().obtenerCantidadEnStock(producto) > 100){
@@ -62,9 +62,9 @@ public class Pedido {
     /*
      * Método para determinar el costo total de un pedido
      */
-    public double calcularCostoTotalPedido(){
+    public double calcularCostoTotalPedido(Collection<Producto> productos){
         double costoTotal = 0.0;
-        for(Producto producto : productos){
+        for(Producto producto : productos) {
             costoTotal += producto.getCantidadSolicitada() * producto.getPrecio();
         }
     return costoTotal * cantidad;

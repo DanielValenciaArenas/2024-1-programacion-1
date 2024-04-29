@@ -73,7 +73,7 @@ public class PedidoTest {
         LocalDate fechaPedido = LocalDate.of(2024, 4, 28);
         Pedido pedido = new Pedido(fechaPedido, 1, productosPedido, cliente1);
 
-        assertEquals(1, pedido.productosConStockMayorA100().size());
+        assertEquals(1, pedido.productosConStockMayorA100(productosPedido).size());
     }
 
     @Test
@@ -97,7 +97,7 @@ public class PedidoTest {
                                  (producto2.getPrecio()*producto2.getCantidadSolicitada())+
                                  (producto3.getPrecio()*producto3.getCantidadSolicitada())) * 3;
 
-    assertEquals(costoTotalEsperado, pedido.calcularCostoTotalPedido(), 0.01);
+    assertEquals(costoTotalEsperado, pedido.calcularCostoTotalPedido(productosPedido), 0.01);
     }
 
 
