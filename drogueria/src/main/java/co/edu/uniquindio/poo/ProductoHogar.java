@@ -3,8 +3,9 @@ package co.edu.uniquindio.poo;
 public class ProductoHogar extends Producto {
     private final String indicaciones;
 
-    public ProductoHogar(String codigoProducto, String nombre, String descripcion, double precio, int stock, String proveedor, String indicaciones){
-        super(codigoProducto, nombre, descripcion, precio, stock, proveedor);
+    public ProductoHogar(String codigoProducto, String nombre, String descripcion, double precio, Stock stock, 
+                        String proveedor, int cantidadSolicitada, String indicaciones){
+        super(codigoProducto, nombre, descripcion, precio, stock, proveedor, cantidadSolicitada);
         this.indicaciones = indicaciones;
     }
 
