@@ -32,8 +32,10 @@ public class Pedido {
     public Cliente getClientePedido() {
         return clientePedido;
     }
-    
 
+    /*
+     * Método de la prueba para no aceptar pedidos que el producto no tenga stock.
+     */
     public boolean pedidoConProductoSinStock(Collection<Producto> productos) {
         boolean stockInsuficiente = false;
         for (Producto producto : productos) {
@@ -44,6 +46,9 @@ public class Pedido {
         return stockInsuficiente;
     }
 
+    /*
+     * Método de la prueba para obtener los productos con un stock mayor a 100.
+     */
     public Collection<Producto> productosConStockMayorA100 () {
         Collection<Producto> productosConStockMayorA100 = new LinkedList<>();
         for(Producto producto : productos) {
@@ -54,6 +59,9 @@ public class Pedido {
         return productosConStockMayorA100;
     }
 
+    /*
+     * Método para determinar el costo total de un pedido
+     */
     public double calcularCostoTotalPedido(){
         double costoTotal = 0.0;
         for(Producto producto : productos){

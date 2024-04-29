@@ -29,6 +29,7 @@ public class PedidoTest {
      * Rigorous Test :-)
      */
 
+     
     @Test
     public void testPedidoConProductoSinStock() {
         Stock inventarioDrogueria = new Stock();
